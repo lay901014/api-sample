@@ -37,8 +37,13 @@ public class SampleTest {
 		selectSql = selectSql.replace("${GH}", "00001");
 		Map<String, String> bodyMap = new HashMap<String, String>();
 		bodyMap.put("query", selectSql);
+		String response = null;
+		try {
+			response = HttpUtils.post(apiEndPoint, new Gson().toJson(bodyMap), token);
+		}catch (Exception e) {
+			e.printStackTrace();
+		}
 		
-		String response = HttpUtils.post(apiEndPoint, new Gson().toJson(bodyMap), token);
 		
 		System.out.println(response);
 	}
