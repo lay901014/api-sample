@@ -89,8 +89,6 @@ public class HttpUtils {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
-			is.close();
-			os.close();
 			br.close();
 		}
     	
