@@ -14,7 +14,7 @@ import com.google.gson.JsonObject;
 
 public class SampleTest {
 
-	//apiÇëÇóµØÖ·
+	//apiè¯·æ±‚åœ°å€
 	public final static String apiEndPoint = "";
 	
 	//auth token
@@ -26,7 +26,7 @@ public class SampleTest {
 	//auth secret
 	public final static String secret = "";
 	
-	//²éÑ¯Óï¾äÊÂÀı
+	//æŸ¥è¯¢è¯­å¥äº‹ä¾‹
 	public static String selectSql = "{ JG_JL(filter : {GH:{eq:\"${GH}\"}}){ GH CRJSZCM QSNY XH CRZW GZNR BZ JZNY SZDW ZMR SCBJ timestamp  } }";
 	
 	
@@ -49,8 +49,8 @@ public class SampleTest {
 	}
 	
 	/**
-	 * ¿Í»§¶ËÄ£Ê½
-	 * »ñÈ¡accessToken
+	 * å®¢æˆ·ç«¯æ¨¡å¼
+	 * è·å–accessToken
 	 * @return
 	 */
 	public static String token() {
@@ -61,7 +61,7 @@ public class SampleTest {
 		
         try {
             oAuthClientRequest = OAuthClientRequest
-                    .tokenLocation("https://jaccount.sjtu.edu.cn/oauth2/token")
+                    .tokenLocation("api_token_url")
                     .setClientId(clientId)
                     .setClientSecret(secret)
                     .setGrantType(GrantType.CLIENT_CREDENTIALS)
