@@ -14,7 +14,7 @@ import com.google.gson.JsonObject;
 
 public class SampleTest {
 
-	//apiÇëÇóµØÖ·
+	//apiï¿½ï¿½ï¿½ï¿½ï¿½Ö·
 	public final static String apiEndPoint = "";
 	
 	//auth token
@@ -26,7 +26,7 @@ public class SampleTest {
 	//auth secret
 	public final static String secret = "";
 	
-	//²éÑ¯Óï¾äÊÂÀý
+	//ï¿½ï¿½Ñ¯ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	public static String selectSql = "{ JG_JL(filter : {GH:{eq:\"${GH}\"}}){ GH CRJSZCM QSNY XH CRZW GZNR BZ JZNY SZDW ZMR SCBJ timestamp  } }";
 	
 	
@@ -39,7 +39,7 @@ public class SampleTest {
 		bodyMap.put("query", selectSql);
 		String response = null;
 		try {
-			response = HttpUtils.post(apiEndPoint, new Gson().toJson(bodyMap), token);
+			response = HttpUtils.get(apiEndPoint, new Gson().toJson(bodyMap), token);
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
@@ -49,8 +49,8 @@ public class SampleTest {
 	}
 	
 	/**
-	 * ¿Í»§¶ËÄ£Ê½
-	 * »ñÈ¡accessToken
+	 * ï¿½Í»ï¿½ï¿½ï¿½Ä£Ê½
+	 * ï¿½ï¿½È¡accessToken
 	 * @return
 	 */
 	public static String token() {
