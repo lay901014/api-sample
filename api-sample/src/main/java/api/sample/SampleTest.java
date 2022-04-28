@@ -14,7 +14,7 @@ import com.google.gson.JsonObject;
 
 public class SampleTest {
 
-	//api�����ַ
+	//api请求地址
 	public final static String apiEndPoint = "";
 	
 	//auth token
@@ -26,7 +26,7 @@ public class SampleTest {
 	//auth secret
 	public final static String secret = "";
 	
-	//��ѯ�������
+	//查询语句事例
 	public static String selectSql = "{ JG_JL(filter : {GH:{eq:\"${GH}\"}}){ GH CRJSZCM QSNY XH CRZW GZNR BZ JZNY SZDW ZMR SCBJ timestamp  } }";
 	
 	
@@ -49,8 +49,8 @@ public class SampleTest {
 	}
 	
 	/**
-	 * �ͻ���ģʽ
-	 * ��ȡaccessToken
+	 * 客户端模式
+	 * 获取accessToken
 	 * @return
 	 */
 	public static String token() {
