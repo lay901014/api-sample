@@ -13,14 +13,7 @@ import java.net.URL;
 //2019-04-02
 public class HttpUtils {
     
-    
-    /**
-     *
-     * http post(短信验证专用)
-     * 
-     * @return
-     * @throws IOException 
-     */
+
     public static String get(String baseUrl, String body, String authorization) throws IOException {
     	
     	InputStream is = null;
@@ -36,7 +29,7 @@ public class HttpUtils {
             connection.setConnectTimeout(15000);
             connection.setReadTimeout(60000);
             connection.setRequestProperty("Content-Type", "application/json;charset=utf-8");//���ò���������json��ʽ
-            connection.setRequestProperty("Authorization", authorization);
+//            connection.setRequestProperty("Authorization", authorization);
             connection.connect();
 
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(connection.getOutputStream(), "UTF-8"));

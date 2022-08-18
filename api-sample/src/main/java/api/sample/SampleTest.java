@@ -1,8 +1,7 @@
 package api.sample;
 
-import java.util.HashMap;
-import java.util.Map;
-
+import com.google.gson.Gson;
+import com.google.gson.JsonObject;
 import org.apache.oltu.oauth2.client.OAuthClient;
 import org.apache.oltu.oauth2.client.URLConnectionClient;
 import org.apache.oltu.oauth2.client.request.OAuthClientRequest;
@@ -11,6 +10,9 @@ import org.apache.oltu.oauth2.common.message.types.GrantType;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonObject;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class SampleTest {
 
@@ -28,12 +30,12 @@ public class SampleTest {
 	
 	//查询语句事例
 	public static String selectSql = "{ JG_JL(filter : {GH:{eq:\"${GH}\"}}){ GH CRJSZCM QSNY XH CRZW GZNR BZ JZNY SZDW ZMR SCBJ timestamp  } }";
-	
+
 	
 	public static void main(String[] args) {
 		
 		String token = token();
-		
+
 		selectSql = selectSql.replace("${GH}", "00001");
 		Map<String, String> bodyMap = new HashMap<String, String>();
 		bodyMap.put("query", selectSql);
@@ -43,8 +45,8 @@ public class SampleTest {
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
-		
-		
+
+
 		System.out.println(response);
 	}
 	
@@ -75,7 +77,7 @@ public class SampleTest {
                 return jsonObject.get("access_token").getAsString();
             
         }catch (Exception e) {
-        	
+
         }
         
         return null;
