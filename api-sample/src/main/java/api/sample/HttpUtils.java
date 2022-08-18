@@ -14,7 +14,7 @@ import java.net.URL;
 public class HttpUtils {
     
 
-    public static String get(String baseUrl, String body, String authorization) throws IOException {
+    public static String get(String baseUrl, String body) throws IOException {
     	
     	InputStream is = null;
     	OutputStream os = null;
@@ -29,7 +29,6 @@ public class HttpUtils {
             connection.setConnectTimeout(15000);
             connection.setReadTimeout(60000);
             connection.setRequestProperty("Content-Type", "application/json;charset=utf-8");//���ò���������json��ʽ
-//            connection.setRequestProperty("Authorization", authorization);
             connection.connect();
 
             BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(connection.getOutputStream(), "UTF-8"));

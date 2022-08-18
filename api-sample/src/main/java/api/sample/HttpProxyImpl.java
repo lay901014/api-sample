@@ -18,7 +18,7 @@ public class HttpProxyImpl implements HttpProxy{
             Class<T> resultClaz, String clientToken) {
         String json;
 		try {
-			json = HttpUtils.get(url, body, clientToken);
+			json = HttpUtils.get(url, body);
 			T result = parse(json, resultClaz);
 	        return result;
 		} catch (IOException e) {
