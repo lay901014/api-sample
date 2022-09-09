@@ -41,7 +41,7 @@ public class SampleTest {
 		bodyMap.put("query", selectSql);
 		String response = null;
 		try {
-			response = HttpUtils.get(apiEndPoint, new Gson().toJson(bodyMap));
+			response = HttpUtils.get(apiEndPoint+token, new Gson().toJson(bodyMap));
 		}catch (Exception e) {
 			e.printStackTrace();
 		}
